@@ -1,4 +1,3 @@
-# AppPizza
-Create app with Js, Next Js and MongoDb
 
+Estamos tratando de laburar en equipo a ver si podemos lograr hacer una app entre todos sin conflictos
 8 integrantes
