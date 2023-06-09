@@ -108,7 +108,7 @@ const RegisterModal = () => {
             >
               <div className="justify-center flex flex-row items-center gap-2">
                 <div>
-                    Allready have an account?
+                    Already have an account?
                 </div>
                 <div
                 onClick={registerModal.onClose}
