@@ -35,6 +35,7 @@ model Account {
   refresh_token     String? @db.String
   access_token      String? @db.String
   expires_at        Int?
+  scope             String?
   token_type        String?
   id_token          String? @db.String
   session_state     String?
