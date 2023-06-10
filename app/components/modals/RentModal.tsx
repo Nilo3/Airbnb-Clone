@@ -1,5 +1,6 @@
 "use client";
 
+
 import { useMemo, useState } from "react";
 import useRentModal from "@/app/hooks/useRentModal";
 import Modal from "./Modal";
@@ -7,12 +8,9 @@ import Heading from "../Heading";
 import { categories } from "../navbar/Categories";
 import CategoryInput from "../inputs/CategoryInput";
 import { FieldValues, useForm } from "react-hook-form";
-<<<<<<< HEAD
 import CountrySelect from "../inputs/CountrySelect";
 import dynamic from "next/dynamic";
 import Counter from "../inputs/Counter";
-=======
->>>>>>> 20b2fd2d36f6f92c9856c808df7aade5aa176d8d
 
 enum STEPS {
   CATEGORY = 0,
@@ -50,7 +48,6 @@ const RentModal = () => {
   });
 
   const category = watch("category");
-<<<<<<< HEAD
   const location = watch("location");
   const guestCount = watch("guestCount");
   const roomCount = watch("roomCount");
@@ -59,8 +56,6 @@ const RentModal = () => {
   const Map = useMemo(() => dynamic(() => import('../Map'), { 
     ssr: false 
   }), [location]);
-=======
->>>>>>> 20b2fd2d36f6f92c9856c808df7aade5aa176d8d
 
   const setCustomValue = (id: string, value: any) => {
     setValue(id, value, {
@@ -121,7 +116,6 @@ const RentModal = () => {
     </div>
   );
 
-<<<<<<< HEAD
 if(step === STEPS.LOCATION){
   bodyContent = (
     <div className="flex flex-col gap-8">
@@ -171,13 +165,11 @@ if (step === STEPS.INFO) {
   )
 }
 
-=======
->>>>>>> 20b2fd2d36f6f92c9856c808df7aade5aa176d8d
   return (
     <Modal
       isOpen={rentModal.isOpen}
       onClose={rentModal.onClose}
-      onSubmit={rentModal.onClose}
+      onSubmit={onNext}
       actionLabel={actionLabel}
       secondaryActionLabel={secondaryActionLabel}
       secondaryAction={step === STEPS.CATEGORY ? undefined : onBack}
