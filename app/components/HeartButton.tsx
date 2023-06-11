@@ -8,7 +8,10 @@ interface HeartButtonProps {
   currentUser?: SafeUser | null;
 }
 
-const HeartButton: React.FC<HeartButtonProps> = ({ listingId, currentUser }) => {
+const HeartButton: React.FC<HeartButtonProps> = ({
+  listingId,
+  currentUser,
+}) => {
   const { hasFavorited, toggleFavorite } = useFavorite({
     listingId,
     currentUser,
