@@ -1,20 +1,24 @@
 "use client";
 
+import axios from 'axios';
 import { useMemo, useState } from "react";
-import useRentModal from "@/app/hooks/useRentModal";
+import { toast } from "react-hot-toast";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import {useRouter} from "next/navigation";
+import dynamic from "next/dynamic";
+
+import { categories } from "../navbar/Categories";
+
 import Modal from "./Modal";
 import Heading from "../Heading";
-import { categories } from "../navbar/Categories";
+
+import useRentModal from "@/app/hooks/useRentModal";
+
 import CategoryInput from "../inputs/CategoryInput";
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import CountrySelect from "../inputs/CountrySelect";
-import dynamic from "next/dynamic";
 import Counter from "../inputs/Counter";
 import ImageUpload from "../inputs/ImageUpload";
 import Input from "../inputs/Input";
-import axios from 'axios';
-import { toast } from "react-hot-toast";
-import {useRouter} from "next/navigation";
 
 enum STEPS {
   CATEGORY = 0,
