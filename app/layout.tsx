@@ -40,7 +40,10 @@ export default async function RootLayout({
           <LoginModal />
           <Navbar currentUser={currentUser} />
         </ClientOnly>
-        {children}</body>
+        <div className='pv-20 pt-28'>
+        {children}
+        </div>
+        </body>
     </html>
   )
 }
