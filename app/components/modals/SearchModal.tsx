@@ -22,7 +22,7 @@ enum STEPS {
     INFO = 2
 }
 
-const searchModal = () => {
+const SearchModal = () => {
     const router = useRouter()
     const params = useSearchParams()
     const searchModal = useSearchModal()
@@ -38,6 +38,7 @@ const searchModal = () => {
         key: 'selection'
     })
 
+    // eslint-disable-next-line
     const Map = useMemo(( ) => dynamic(() => import ('../Map'), {
         ssr: false,        
     }), [location])
@@ -194,4 +195,4 @@ const searchModal = () => {
 }
 
 
-export default searchModal
+export default SearchModal
