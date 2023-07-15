@@ -25,7 +25,7 @@ const ListingPage = async ({params}:{params: IParams}) => {
   <div>
     <ClientOnly>
     <ListingClient
-    
+    listing={listing}
     reservations={reservations}
     currentUser={currentuser}
     />
